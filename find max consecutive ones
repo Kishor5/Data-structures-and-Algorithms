@@ -1,0 +1,13 @@
+def findcons(nums):
+    n = len(nums)
+    count = 0
+    maxcount = 0
+    for i in range(0,n):
+        if nums[i] ==1:
+            count += 1
+        else:
+            maxcount = max(count,maxcount)
+            count = 0
+    return maxcount
+nums = [1,0,1,1,0,1,1,1,1,0]
+print(findcons(nums))

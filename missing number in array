@@ -1,0 +1,24 @@
+def missingnum(nums):
+    n= len(nums)
+    for i in range(0,n+1):
+        if i not in nums:
+            return i
+
+nums = [9,6,3,2,1,0,7,4,5]
+print(missingnum(nums))
+
+
+#optimal using dictionary data structure
+
+def missingnums(nums1):
+    n=len(nums1)
+    freq ={}
+    for i in range(0,n+1):
+        freq[i]=0
+    for num in nums1:
+        freq[num]=1
+    for k, v in freq.items():
+        if v==0:
+            return k
+nums1 = [1,5,3,6,0,4]
+print(missingnums(nums1))
